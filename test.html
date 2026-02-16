@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Traitement</title>
+</head>
+
+<body>
+    <h1>Données reçues</h1>
+    <div id="data"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const dataDiv = document.getElementById('data');
+
+        const labels = {
+            prenom: "Prénom",
+            classe: "Classe",
+            genre: "Genre",
+            date_naiss: "Date de naissance",
+            club: "Club Sciences",
+            contact: "Contact",
+            courriel: "Courriel",
+            opt1: "Option 1",
+            opt2: "Option 2",
+            opt3: "Option 3",
+            heures: "Heures NSI",
+            motivation: "Motivation"
+        };
+
+        for (const [key, value] of params.entries()) {
+            if (labels[key]) {
+                const p = document.createElement('p');
+                p.textContent = `${labels[key]} : ${value}`;
+                dataDiv.appendChild(p);
+            }
+        }
+    </script>
+</body>
+
+</html>

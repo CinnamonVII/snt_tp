@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire Options Première</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 20px;
+            background-color: white;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .champ {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .block-label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Formulaire à remplir pour le choix des options de spécialité en classe de Première</h1>
+
+    <p>Ce formulaire non définitif a pour but d'établir un sondage des options choisies en fin d'année de seconde.<br>
+        Il a pour but d'établir un effectif prévisionnel des différents groupes-classes.</p>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <form method="get" action="test.html">
+
+        <div class="champ">
+            <label for="prenom">Votre prénom :</label>
+            <input type="text" name="prenom" id="prenom">
+        </div>
+
+        <div class="champ">
+            <label for="classe">Classe :</label>
+            <input type="text" name="classe" id="classe">
+        </div>
+
+        <div class="champ">
+            <label for="genre" style="vertical-align: top;">Genre :</label>
+            <select name="genre" id="genre" size="3" style="vertical-align: top;">
+                <option value="indéfini" selected>indéfini</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+            </select>
+        </div>
+
+        <div class="champ">
+            <label for="date_naiss">Date de naissance :</label>
+            <input type="date" name="date_naiss" id="date_naiss" value="2005-01-01">
+        </div>
+
+        <div class="champ">
+            <label class="block-label">Souhaitez-vous rejoindre le groupe de discussion du Club de Sciences?</label>
+            <input type="radio" name="club" value="oui" id="club_oui"> <label for="club_oui">oui</label>
+            <input type="radio" name="club" value="non" id="club_non" checked> <label for="club_non">non</label>
+        </div>
+
+        <div class="champ">
+            <label class="block-label">Meilleure méthode pour vous contacter :</label>
+            <ul>
+                <li><input type="radio" name="contact" value="Email" id="c_email" checked> <label
+                        for="c_email">Email</label></li>
+                <li><input type="radio" name="contact" value="Téléphone" id="c_tel"> <label
+                        for="c_tel">Téléphone</label></li>
+                <li><input type="radio" name="contact" value="SMS" id="c_sms"> <label for="c_sms">SMS</label></li>
+                <li><input type="radio" name="contact" value="Groupe" id="c_group"> <label for="c_group">Groupe de
+                        discussion</label></li>
+            </ul>
+        </div>
+
+        <div class="champ">
+            <label for="courriel">Courriel de contact avant la mise en place de l'ENT :</label>
+            <input type="email" name="courriel" id="courriel" size="30">
+        </div>
+
+        <br><br>
+
+        <div class="champ">
+            <label for="opt1">Option_1 :</label>
+            <select name="opt1" id="opt1">
+                <option value="LANGUES">LANGUES</option>
+                <option value="MATHS">MATHS</option>
+                <option value="NSI">NSI</option>
+            </select>
+        </div>
+
+        <div class="champ">
+            <label for="opt2">Option_2 :</label>
+            <select name="opt2" id="opt2">
+                <option value="GEOPOLITIQUE">GEOPOLITIQUE</option>
+                <option value="SVT">SVT</option>
+                <option value="SES">SES</option>
+            </select>
+        </div>
+
+        <div class="champ">
+            <label for="opt3">Option_3 :</label>
+            <select name="opt3" id="opt3">
+                <option value="PHILO">PHILO</option>
+                <option value="HISTOIRE">HISTOIRE</option>
+                <option value="ARTS">ARTS</option>
+            </select>
+        </div>
+
+        <div class="champ">
+            <label class="block-label" for="heures">Si vous avez choisi l'option NSI, combien d'heures de travail
+                personnel avez-vous l'intention d'y consacrer par semaine ? <input type="number" name="heures"
+                    id="heures" value="1" style="width: 40px;"></label>
+        </div>
+
+        <div class="champ">
+            <label class="block-label">Quel est votre degré de motivation pour cet enseignement ?</label>
+            <input type="range" name="motivation" min="0" max="100">
+        </div>
+
+        <br>
+        <button type="submit">Envoyer</button>
+
+    </form>
+
+</body>
+
+</html>
